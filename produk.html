@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Salna Parfume</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="bg-gray-50">
+    <!-- Navbar -->
+    <nav class="navbar shadow-lg">
+      <div class="max-w-6xl mx-auto flex items-center justify-between">
+        <img src="asset/logo.png" alt="Logo" class="h-16" />
+        <div class="hidden md:flex space-x-6 text-lg font-semibold">
+          <a href="index.html#home" class="hover:text-gray-700">Home</a>
+          <a href="index.html#about" class="hover:text-gray-700">About</a>
+          <a href="produk.html" class="hover:text-gray-700">Produk</a>
+        </div>
+        <button id="menu-toggle" class="md:hidden text-xl">☰</button>
+      </div>
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden flex flex-col mt-2 px-4 space-y-2 text-lg font-semibold"
+      >
+        <a href="index.html#home" class="hover:text-gray-700">Home</a>
+        <a href="index.html#about" class="hover:text-gray-700">About</a>
+        <a href="produk.html" class="hover:text-gray-700">Produk</a>
+      </div>
+    </nav>
+
+    <!-- Produk Section -->
+    <div class="max-w-6xl mx-auto p-6 bg-white shadow-md rounded-lg mt-24">
+      <h2 class="text-3xl font-bold mb-6 text-center text-gray-800">
+        Produk Kami
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-gray-100 p-6 rounded-lg text-center shadow-lg">
+          <img
+            src="asset/sc.png"
+            alt="Produk 1"
+            class="w-full h-64 object-cover rounded-lg mb-4"
+          />
+          <h3 class="text-2xl font-semibold">
+            Salna Parfum - Scandalious (50ml)
+          </h3>
+          <p class="text-gray-700 mt-2">
+            Parfum dengan aroma elegan dan sensual, perpaduan raspberry, peony,
+            dan vanilla.
+          </p>
+          <p class="text-xl font-bold text-green-600">Rp. 150.000,00</p>
+          <button
+            class="mt-4 bg-green-600 text-white py-2 px-6 rounded-lg w-full hover:bg-green-700"
+            onclick="pesanWhatsApp('Scandalious')"
+          >
+            Beli Sekarang
+          </button>
+        </div>
+        <div class="bg-gray-100 p-6 rounded-lg text-center shadow-lg">
+          <img
+            src="asset/lb.png"
+            alt="Produk 2"
+            class="w-full h-64 object-cover rounded-lg mb-4"
+          />
+          <h3 class="text-2xl font-semibold">
+            Salna Parfum - Lustrous Bloom (50ml)
+          </h3>
+          <p class="text-gray-700 mt-2">
+            Aroma feminin dengan sentuhan bergamot, peony, dan vanilla yang
+            meningkatkan kepercayaan diri.
+          </p>
+          <p class="text-xl font-bold text-green-600">Rp. 150.000,00</p>
+          <button
+            class="mt-4 bg-green-600 text-white py-2 px-6 rounded-lg w-full hover:bg-green-700"
+            onclick="pesanWhatsApp('Lustrous Bloom')"
+          >
+            Beli Sekarang
+          </button>
+        </div>
+        <div class="bg-gray-100 p-6 rounded-lg text-center shadow-lg">
+          <img
+            src="asset/ow.jpg"
+            alt="Produk 3"
+            class="w-full h-64 object-cover rounded-lg mb-4"
+          />
+          <h3 class="text-2xl font-semibold">
+            Salna Parfum - Ocean Whimsy (50ml)
+          </h3>
+          <p class="text-gray-700 mt-2">
+            Parfum dengan kombinasi floral dan musk yang menciptakan kesan
+            misterius dan memikat.
+          </p>
+          <p class="text-xl font-bold text-green-600">Rp. 150.000,00</p>
+          <button
+            class="mt-4 bg-green-600 text-white py-2 px-6 rounded-lg w-full hover:bg-green-700"
+            onclick="pesanWhatsApp('Mystique Aura')"
+          >
+            Beli Sekarang
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>
