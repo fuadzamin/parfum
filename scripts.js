@@ -60,7 +60,7 @@ function pesanWhatsApp(produk) {
   let pembayaran = prompt("Metode pembayaran (Transfer/COD):");
   if (nama && alamat && pembayaran) {
     let pesan = `Halo, saya ingin memesan ${produk}%0ANama: ${nama}%0AAlamat: ${alamat}%0APembayaran: ${pembayaran}`;
-    window.open(`https://wa.me/6283892867696?text=${pesan}`, "_blank");
+    window.open(`https://wa.me/6282147840202?text=${pesan}`, "_blank");
   } else {
     alert("Harap isi semua data pemesanan.");
   }
