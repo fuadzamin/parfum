@@ -65,3 +65,6 @@ function pesanWhatsApp(produk) {
     alert("Harap isi semua data pemesanan.");
   }
 }
+menuToggle.addEventListener("click", function () {
+  mobileMenu.classList.toggle("active");
+});
