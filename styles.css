@@ -28,3 +28,10 @@
 .navbar:hover a {
   color: black;
 }
+#mobile-menu {
+  display: none;
+}
+
+#mobile-menu.active {
+  display: block;
+}
