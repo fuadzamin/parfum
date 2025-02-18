@@ -29,31 +29,45 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Toggle menu
-  menuToggle.addEventListener("click", function () {
-    mobileMenu.classList.toggle("hidden");
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.getElementById("menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    menuToggle.addEventListener("click", function () {
+      mobileMenu.classList.toggle("hidden");
+    });
   });
 
   // Slider functions
-  function showSlide(index) {
-    slider.style.transform = `translateX(-${index * 100}%)`;
-  }
+  document.addEventListener("DOMContentLoaded", function () {
+    const slider = document.getElementById("slider");
+    const slides = slider.children;
+    const prevBtn = document.getElementById("prev-slide");
+    const nextBtn = document.getElementById("next-slide");
+    let index = 0;
+    
+    function updateSlider() {
+      const translateValue = -index * 100 + "%";
+      slider.style.transform = "translateX(" + translateValue + ")";
+    }
 
-  function nextSlide() {
-    currentSlide = (currentSlide + 1) % totalSlides;
-    showSlide(currentSlide);
-  }
+    nextBtn.addEventListener("click", function () {
+      index = (index + 1) % slides.length;
+      updateSlider();
+    });
 
-  function prevSlide() {
-    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-    showSlide(currentSlide);
-  }
+    prevBtn.addEventListener("click", function () {
+      index = (index - 1 + slides.length) % slides.length;
+      updateSlider();
+    });
 
-  nextButton.addEventListener("click", nextSlide);
-  prevButton.addEventListener("click", prevSlide);
-
-  // Slider otomatis
-  setInterval(nextSlide, 3000);
-});
+    // Auto Slide setiap 3 detik
+    setInterval(function () {
+      index = (index + 1) % slides.length;
+      updateSlider();
+    }, 3000);
+  });
 function pesanWhatsApp(produk) {
   let nama = prompt("Masukkan nama Anda:");
   let alamat = prompt("Masukkan alamat pengiriman:");
