@@ -29,7 +29,15 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Toggle menu
+// Mendapatkan elemen-elemen yang diperlukan
+const menuToggle = document.getElementById("menu-toggle");
+const mobileMenu = document.getElementById("mobile-menu");
 
+// Menambahkan event listener untuk tombol menu
+menuToggle.addEventListener("click", () => {
+  // Toggle tampilan menu mobile (menampilkan/sembunyikan)
+  mobileMenu.classList.toggle("hidden");
+});
   document.addEventListener("DOMContentLoaded", function () {
     const menuToggle = document.getElementById("menu-toggle");
     const mobileMenu = document.getElementById("mobile-menu");
