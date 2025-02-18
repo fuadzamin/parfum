@@ -28,65 +28,43 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Toggle menu
-// Mendapatkan elemen-elemen yang diperlukan
-const menuToggle = document.getElementById("menu-toggle");
-const mobileMenu = document.getElementById("mobile-menu");
-
-// Menambahkan event listener untuk tombol menu
-menuToggle.addEventListener("click", () => {
-  // Toggle tampilan menu mobile (menampilkan/sembunyikan)
-  mobileMenu.classList.toggle("hidden");
-});
-  document.addEventListener("DOMContentLoaded", function () {
-    const menuToggle = document.getElementById("menu-toggle");
-    const mobileMenu = document.getElementById("mobile-menu");
-
-    menuToggle.addEventListener("click", function () {
-      mobileMenu.classList.toggle("hidden");
-    });
+  // Toggle menu for mobile view
+  menuToggle.addEventListener("click", function () {
+    mobileMenu.classList.toggle("hidden");
   });
 
   // Slider functions
-  document.addEventListener("DOMContentLoaded", function () {
-    const slider = document.getElementById("slider");
-    const slides = slider.children;
-    const prevBtn = document.getElementById("prev-slide");
-    const nextBtn = document.getElementById("next-slide");
-    let index = 0;
-    
-    function updateSlider() {
-      const translateValue = -index * 100 + "%";
-      slider.style.transform = "translateX(" + translateValue + ")";
-    }
-
-    nextBtn.addEventListener("click", function () {
-      index = (index + 1) % slides.length;
-      updateSlider();
-    });
-
-    prevBtn.addEventListener("click", function () {
-      index = (index - 1 + slides.length) % slides.length;
-      updateSlider();
-    });
-
-    // Auto Slide setiap 3 detik
-    setInterval(function () {
-      index = (index + 1) % slides.length;
-      updateSlider();
-    }, 3000);
-  });
-function pesanWhatsApp(produk) {
-  let nama = prompt("Masukkan nama Anda:");
-  let alamat = prompt("Masukkan alamat pengiriman:");
-  let pembayaran = prompt("Metode pembayaran (Transfer/COD):");
-  if (nama && alamat && pembayaran) {
-    let pesan = `Halo, saya ingin memesan ${produk}%0ANama: ${nama}%0AAlamat: ${alamat}%0APembayaran: ${pembayaran}`;
-    window.open(`https://wa.me/6282147840202?text=${pesan}`, "_blank");
-  } else {
-    alert("Harap isi semua data pemesanan.");
+  function updateSlider() {
+    const translateValue = -currentSlide * 100 + "%";
+    slider.style.transform = "translateX(" + translateValue + ")";
   }
-}
-menuToggle.addEventListener("click", function () {
-  mobileMenu.classList.toggle("active");
+
+  nextButton.addEventListener("click", function () {
+    currentSlide = (currentSlide + 1) % totalSlides;
+    updateSlider();
+  });
+
+  prevButton.addEventListener("click", function () {
+    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+    updateSlider();
+  });
+
+  // Auto Slide every 3 seconds
+  setInterval(function () {
+    currentSlide = (currentSlide + 1) % totalSlides;
+    updateSlider();
+  }, 3000);
+
+  // WhatsApp order function
+  function pesanWhatsApp(produk) {
+    let nama = prompt("Masukkan nama Anda:");
+    let alamat = prompt("Masukkan alamat pengiriman:");
+    let pembayaran = prompt("Metode pembayaran (Transfer/COD):");
+    if (nama && alamat && pembayaran) {
+      let pesan = `Halo, saya ingin memesan ${produk}%0ANama: ${nama}%0AAlamat: ${alamat}%0APembayaran: ${pembayaran}`;
+      window.open(`https://wa.me/6282147840202?text=${pesan}`, "_blank");
+    } else {
+      alert("Harap isi semua data pemesanan.");
+    }
+  }
 });
