@@ -29,28 +29,41 @@
       </div>
     </nav>
 
-    <!-- Slider -->
-    <div class="relative mt-0">
-      <div class="relative overflow-hidden">
-        <div id="slider" class="flex transition-transform duration-500">
-          <img src="asset/poster.png" class="w-full h-screen object-cover" />
-          <img src="asset/poster1.png" class="w-full h-screen object-cover" />
-          <img src="asset/poster2.png" class="w-full h-screen object-cover" />
-        </div>
-        <button
-          id="prev-slide"
-          class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full"
-        >
-          ❮
-        </button>
-        <button
-          id="next-slide"
-          class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full"
-        >
-          ❯
-        </button>
-      </div>
+  <!-- Slider -->
+<div class="relative w-full h-[400px] md:h-screen mt-0">
+  <div class="relative overflow-hidden w-full h-full">
+    <div
+      id="slider"
+      class="flex transition-transform duration-500 ease-in-out w-full h-full"
+    >
+      <img
+        src="asset/poster.png"
+        class="w-full h-full object-cover flex-shrink-0"
+      />
+      <img
+        src="asset/poster1.png"
+        class="w-full h-full object-cover flex-shrink-0"
+      />
+      <img
+        src="asset/poster2.png"
+        class="w-full h-full object-cover flex-shrink-0"
+      />
     </div>
+    <!-- Tombol Navigasi -->
+    <button
+      id="prev-slide"
+      class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full"
+    >
+      ❮
+    </button>
+    <button
+      id="next-slide"
+      class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full"
+    >
+      ❯
+    </button>
+  </div>
+</div>
 
     <!-- Home Section -->
     <section
