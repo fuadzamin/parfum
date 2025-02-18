@@ -1,3 +1,4 @@
+/* Navbar fixed */
 .navbar {
   position: fixed;
   top: 0;
@@ -28,10 +29,32 @@
 .navbar:hover a {
   color: black;
 }
+
+/* Menu mobile */
 #mobile-menu {
-  display: none;
+  display: none; /* Menyembunyikan menu secara default */
+  position: absolute;
+  top: 100%; /* Menempatkan menu tepat di bawah navbar */
+  right: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 10; /* Pastikan menu berada di atas elemen lain */
 }
 
 #mobile-menu.active {
+  display: block; /* Menampilkan menu ketika kelas active ditambahkan */
+}
+
+#mobile-menu a {
   display: block;
+  padding: 12px;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  background-color: white;
+  border-top: 1px solid #ccc; /* Garis pemisah antar item */
+}
+
+#mobile-menu a:hover {
+  background-color: #f0f0f0;
 }
