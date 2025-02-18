@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Toggle menu for mobile view
   menuToggle.addEventListener("click", function () {
-    mobileMenu.classList.toggle("hidden");
+    mobileMenu.classList.toggle("hidden"); // Mengubah status visibilitas menu
   });
 
   // Slider functions
